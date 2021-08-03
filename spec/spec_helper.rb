@@ -1,3 +1,11 @@
+require 'simplecov'
+
+SimpleCov.profiles.define 'log_parser' do
+  add_filter 'spec'
+end
+  
+SimpleCov.start 'log_parser'
+
 require_relative '../lib/log_parser'
 
 RSpec.configure do |config|
