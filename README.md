@@ -5,6 +5,8 @@ A simple log parser written in ruby that summarises the server log in terminal
 - Go to the project directory
   - Install Ruby `3.0.2` and latest `bundler` gem by either `rbenv` or by `rvm` 
   - Hit command `bundle install`
+  - You might want to change the `ruby` path if you do not have system level `ruby` install, in that case, from terminal
+    - You have to hit `which ruby` from terminal and then copy the path and then replace the pat mentioned in the first line of `parser.rb`  
 
 ## Running the application
 - From application root directory
