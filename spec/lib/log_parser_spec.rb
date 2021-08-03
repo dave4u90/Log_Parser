@@ -6,8 +6,7 @@ describe LogParser do
   let(:parser) { described_class.new(logfile: valid_file_path) }
 
   # LogParser.new(logfile: <file_path>)
-  
-  xdescribe 'initialization' do
+  describe 'initialization' do
     context 'with no logfile argument' do
       it 'should raise Argument error' do
         expect { described_class.new() }.to raise_error(ArgumentError)
@@ -15,7 +14,7 @@ describe LogParser do
     end
   end
 
-  xdescribe '#valid?' do
+  describe '#valid?' do
     subject { parser.valid? }
 
     context 'with valid path' do
