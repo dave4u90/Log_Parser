@@ -41,4 +41,16 @@ class LogParser
       { user_addr: user_addr, entry_count: entries.count }
     end
   end
+
+  def sorted_endpoint_entries
+    entry_counts_by_endpoint.sort_by { |data| data[:entry_count] }.reverse
+  end
+
+  def sorted_controller_path_entries
+    entry_counts_by_controller_path.sort_by { |data| data[:entry_count] }.reverse
+  end
+
+  def sorted_user_addr_entries
+    entry_counts_by_user_addr.sort_by { |data| data[:entry_count] }.reverse.first(3)
+  end
 end

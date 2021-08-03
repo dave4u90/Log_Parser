@@ -108,7 +108,7 @@ describe LogParser do
     end
   end
 
-  xdescribe '#sorted_endpoint_entries' do
+  describe '#sorted_endpoint_entries' do
     before do
       allow(parser).to receive(:entry_counts_by_endpoint).and_return(
         [
@@ -144,7 +144,7 @@ describe LogParser do
     end
   end
 
-  xdescribe '#sorted_controller_path_entries' do
+  describe '#sorted_controller_path_entries' do
     before do
       allow(parser).to receive(:entry_counts_by_controller_path).and_return(
         [
@@ -180,7 +180,7 @@ describe LogParser do
     end
   end
 
-  xdescribe '#sorted_user_addr_entries' do
+  describe '#sorted_user_addr_entries' do
     before do
       allow(parser).to receive(:entry_counts_by_user_addr).and_return(
         [
