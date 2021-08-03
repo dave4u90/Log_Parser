@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'pry'
 require 'colorize'
 require_relative 'lib/log_parser'
 
