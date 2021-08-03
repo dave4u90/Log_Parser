@@ -35,7 +35,7 @@ describe LogParser do
   end
 
   #[{ endpoint: '/home/2', controller_path: '/home', user_addr: '8.8.8.8' }]
-  xdescribe '#parse' do
+  describe '#parse' do
     subject { parser.parse }
 
     it 'should return an array' do

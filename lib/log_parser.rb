@@ -14,4 +14,13 @@ class LogParser
   def valid?
     errors.nil?
   end
+
+  def parse
+    @parsed_data ||= logfile.map do |log|
+      endpoint, user_addr = log.split(' ')
+      controller_path = "/#{endpoint.split('/')[1]}"
+
+      { endpoint: endpoint, controller_path: controller_path, user_addr: user_addr}
+    end
+  end
 end
