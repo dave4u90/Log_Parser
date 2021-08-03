@@ -52,7 +52,7 @@ describe LogParser do
   end
 
   #[{ endpoint: '/home/2', entry_count: 10 }]
-  xdescribe '#entry_counts_by_endpoint' do
+  describe '#entry_counts_by_endpoint' do
     before { parser.parse }
 
     subject { parser.entry_counts_by_endpoint }
@@ -71,7 +71,7 @@ describe LogParser do
   end
 
   #[{ endpoint: '/home', entry_count: 15 }]
-  xdescribe '#entry_counts_by_controller_path' do
+  describe '#entry_counts_by_controller_path' do
     before { parser.parse }
 
     subject { parser.entry_counts_by_controller_path }
@@ -90,7 +90,7 @@ describe LogParser do
   end
 
   #[{ user_addr: '8.8.8.8', entry_count: 100 }]
-  xdescribe '#entry_counts_by_user_addr' do
+  describe '#entry_counts_by_user_addr' do
     before { parser.parse }
 
     subject { parser.entry_counts_by_user_addr }
