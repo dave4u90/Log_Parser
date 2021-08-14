@@ -1,12 +1,14 @@
 require 'simplecov'
 
 SimpleCov.profiles.define 'log_parser' do
+  track_files '{lib}/**/*.rb'
+  enable_coverage :branch
   add_filter 'spec'
 end
   
 SimpleCov.start 'log_parser'
 
-require_relative '../lib/log_parser'
+require_relative '../lib/log_parser/parser'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
