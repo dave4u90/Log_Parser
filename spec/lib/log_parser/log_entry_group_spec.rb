@@ -1,6 +1,6 @@
 require_relative '../../../lib/log_parser/log_entry_group'
 
-xdescribe LogParser::LogEntryGroup do
+describe LogParser::LogEntryGroup do
   describe '#initialize' do
     context 'without all the necessary parameters' do
       it 'expect to throw error' do
