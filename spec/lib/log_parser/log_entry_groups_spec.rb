@@ -2,7 +2,7 @@ require_relative '../../../lib/log_parser/log_entry'
 require_relative '../../../lib/log_parser/log_entry_group'
 require_relative '../../../lib/log_parser/log_entry_groups'
 
-xdescribe LogParser::LogEntryGroups do
+describe LogParser::LogEntryGroups do
   let(:attributes) { {} }
   let(:log_entries) do
     [
