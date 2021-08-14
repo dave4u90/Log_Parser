@@ -1,6 +1,6 @@
 require_relative '../../../lib/log_parser/parser'
 
-xdescribe LogParser::Parser do
+describe LogParser::Parser do
   let(:valid_file_path) { 'resources/webserver.log' }
   let(:invalid_file_path) { 'invalid_file_path' }
   let(:parser) { described_class.new(logfile: valid_file_path) }
