@@ -1,6 +1,6 @@
 require_relative '../../../lib/log_parser/log_entry'
 
-xdescribe LogParser::LogEntry do
+describe LogParser::LogEntry do
   describe '#initialize' do
     context 'without all the necessary parameters' do
       it 'expect to throw error' do
@@ -12,6 +12,14 @@ xdescribe LogParser::LogEntry do
       it 'should get initialized successfully' do
         expect { described_class.new(endpoint: 'endpoint', controller_path: 'controller_path', user_addr: 'user_addr') }.to_not raise_error
       end
+    end
+  end
+
+  describe '#controller_path' do
+    let(:log_entry) { described_class.new(endpoint: '/home/1', controller_path: 'home', user_addr: '8.8.8.8') }
+
+    it 'should append a / with the controller path' do
+      expect(log_entry.controller_path).to eq('/home')
     end
   end
 
